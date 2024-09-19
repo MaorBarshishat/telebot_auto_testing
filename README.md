@@ -32,3 +32,6 @@ The following will be executed to apply the tests
  ```
     python3 testing.py
 ```
+
+### since the appium/android docker is immutable, and it is not my own commited docker, it is required to exchange some data from the server to the client. Such data is hash value and IP address. Future version will create a appium/android docker with all testing configuration in place, so this won't be required anymore.
+
