@@ -13,7 +13,7 @@ BAD_VIDEO_MESSAGE = "Such video is not supported"
 BAD_TEXT_MESSAGE = "Such text is not supported"
 
 CORRECT_MESSAGE_TYPE = 'SUCCESS'
-CORRECT_PHOTO_HASHED = "dcd777da5adf6371486e2b75572ebb46"
+EXPECTED_HASH = os.getenv('EXPECTED_HASH')
 
 PHOTO_INDEX_MEDIA = 1
 VIDEO_INDEX_MEDIA = 0
@@ -169,8 +169,8 @@ class TestAppium(unittest.TestCase):
         received_message = self.check_received_message(CORRECT_MESSAGE_TYPE)
 
         # check if the hash is correct
-        self.assertTrue(CORRECT_PHOTO_HASHED in received_message,
-                        f'''Wrong hash for photo, expected: '{CORRECT_PHOTO_HASHED}' ''')
+        self.assertTrue(EXPECTED_HASH in received_message,
+                        f'''Wrong hash for photo, expected: '{EXPECTED_HASH}' ''')
 
         print("send photo test - success")
 
