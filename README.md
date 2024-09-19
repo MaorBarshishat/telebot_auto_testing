@@ -21,7 +21,7 @@ The tests can be executed either as a Docker container or as a Python program on
 ```
 
 ### executed on host using python command:
-Please make sure you have python3 installed on your machine.
+Please make sure you have python3 installed on your machine.<br />
 The installation
  ```
     git clone https://github.com/MaorBarshishat/telebot_auto_testing.git
