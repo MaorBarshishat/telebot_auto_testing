@@ -1,10 +1,13 @@
-# telebot_auto_testing
+# TeleBot Auto Testing
 
-this is an appium client that tests the telebot automatically
-it communicates with the appium server.
+This Appium client was developed to automatically test the TeleBot. It communicates with an Appium server to execute the tests.
 
-in order to execute the test you may either run it as a socker, or as a python program.
+### Features:
+- **Automated Testing:** This client simulates user interactions to automatically test the TeleBot's functionality.
+- **Server Communication:** The client communicates with an Appium server to manage and execute test cases.
 
+### Running the Tests:
+You can run the tests either as a Docker container or as a Python program.
 ### as a docker:
 ```
    sudo docker run -d maorbarshishat/appium_client_auto_test_maor:2.0
