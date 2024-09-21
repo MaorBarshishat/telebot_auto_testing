@@ -17,11 +17,13 @@ The tests can be executed either as a Docker container or as a Python program on
 
 ### as a docker:
 ```
-   sudo docker run -d maorbarshishat/appium_client_auto_test_maor:latest
+   sudo docker network create --subnet=172.18.0.0/16 net_maor
+   sudo docker run -ti --net net_maor --ip 172.18.0.3  maorbarshishat/appium_client_auto_test_maor:2.2
 ```
+note: if net_maor was already created, an error message will appear, so plz ignore it.
 
 ### executed on host using python command:
-Please make sure you have python3 installed on your machine.<br />
+Please make sure you have python3 and pip3 installed on your machine.<br />
 The installation
  ```
     git clone https://github.com/MaorBarshishat/telebot_auto_testing.git
@@ -32,6 +34,4 @@ The following will be executed to apply the tests
  ```
     python3 testing.py
 ```
-
-### since the appium/android docker is immutable, and it is not my own commited docker, it is required to exchange some data from the server to the client. Such data is hash value and IP address. Future version will create a appium/android docker with all testing configuration in place, so this won't be required anymore.
 
